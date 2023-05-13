@@ -1,5 +1,10 @@
 const PokemonCard = (props) => {
-  return <p>Soy una pokemon card</p>;
+  return (
+    <div classname="Card">
+      <p className="fw-bold">Bulbasur</p>
+      <p>Bulbasur</p>
+    </div>
+  );
 };
 
 export default PokemonCard;
