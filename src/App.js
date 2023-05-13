@@ -1,8 +1,8 @@
-import PokemonCard from "./Components/UI/PokemonCard/PokemonCard";
+import { Home } from "./pages/Home";
 import "./App.css";
 
 function App() {
-  return <PokemonCard />;
+  return <Home />;
 }
 
 export default App;

@@ -1,0 +1,6 @@
+.pokemon-types {
+    display: flex;
+    justify-content: center;
+    gap: var(--mini);
+    margin-bottom: var(--mini);
+  }

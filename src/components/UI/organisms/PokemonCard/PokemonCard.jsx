@@ -1,42 +1,10 @@
 import "./styles.css";
-import weight from "../../../assets/images/icons/width.svg";
-import height from "../../../assets/images/icons/height.svg";
-import bulbasaur from "../../../assets/images/pokemons/bulbasaur.png";
+import weight from "../../../../assets/images/icons/width.svg";
+import height from "../../../../assets/images/icons/height.svg";
+import bulbasaur from "../../../../assets/images/pokemons/bulbasaur.png";
 
-const TypeChip = ({ type }) => {
-  const styles = {
-    backgroundColor: `var(--type-${type})`,
-  };
-
-  const typeUppercase = type[0].toUpperCase() + type.slice(1);
-
-  return (
-    <span className="chip" style={styles}>
-      {typeUppercase}
-    </span>
-  );
-};
-
-const PokemonTypesChips = ({ types }) => {
-  return (
-    <div className="pokemon-types">
-      {types.map((type) => (
-        <TypeChip type={type} />
-      ))}
-    </div>
-  );
-};
-
-const AboutTitle = ({ type }) => {
-  const styles = {
-    color: `var(--type-${type})`,
-  };
-  return (
-    <h3 className="title-about" style={styles}>
-      About
-    </h3>
-  );
-};
+import {ChipGroup} from '../../molecules/ChipGroup'
+import { AboutTitle } from "../../atoms/AboutTitle/AboutTitle";
 
 const PokemonCard = (props) => {
   const types = ["grass", "poison"];
@@ -48,7 +16,7 @@ const PokemonCard = (props) => {
       </div>
       <div className="pokemon-attributes">
         <img src={bulbasaur} alt="" className="poke-image"></img>
-        <PokemonTypesChips types={types} />
+        <ChipGroup types={types} />
         <AboutTitle type={types[0]} />
         <div className="pokemon-data">
           <div className="data-group">

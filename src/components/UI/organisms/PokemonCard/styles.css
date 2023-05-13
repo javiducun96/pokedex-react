@@ -46,31 +46,6 @@
   top: -99px;
 }
 
-.chip {
-  border-radius: 10px;
-  padding: 2px 8px;
-  font-size: var(--font-small-size);
-  color: var(--white);
-  line-height: var(--font-small-line-height);
-  font-weight: bold;
-}
-
-.pokemon-types {
-  display: flex;
-  justify-content: center;
-  gap: var(--mini);
-  margin-bottom: var(--mini);
-}
-
-.title-about {
-  font-size: var(--font-medium-size);
-  line-height: var(--font-medium-line-height);
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  margin-bottom: var(--mini);
-}
-
 .pokemon-data {
   display: flex;
   gap: var(--base);
