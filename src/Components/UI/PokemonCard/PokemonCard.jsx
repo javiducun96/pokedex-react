@@ -24,6 +24,17 @@ const PokemonTypesChips = ({ types }) => {
   );
 };
 
+const AboutTitle = ({ type }) => {
+  const styles = {
+    color: `var(--type-${type})`,
+  };
+  return (
+    <h3 className="title-about" style={styles}>
+      About
+    </h3>
+  );
+};
+
 const PokemonCard = (props) => {
   const types = ["grass", "poison"];
   return (
@@ -34,7 +45,11 @@ const PokemonCard = (props) => {
       </div>
       <div className="pokemon-attributes">
         <PokemonTypesChips types={types} />
-        <h3 className="title-about type-grass">About</h3>
+        <AboutTitle type={types[0]} />
+        <div className="pokemon-data">
+          <div>prop 1</div>
+          <div>prop 2</div>
+        </div>
       </div>
     </article>
   );
