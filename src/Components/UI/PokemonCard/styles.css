@@ -9,10 +9,6 @@
   justify-content: space-between;
 }
 
-.type-grass {
-  background-color: var(--type-grass);
-}
-
 .card-header {
   display: flex;
   justify-content: space-between;
@@ -39,4 +35,68 @@
   border-radius: 8px;
   background-color: white;
   padding: 56px 20px 16px 20px;
+}
+
+.chip {
+  border-radius: 10px;
+  padding: 2px 8px;
+  font-size: var(--font-small-size);
+  color: var(--white);
+  line-height: var(--font-small-line-height);
+  font-weight: bold;
+}
+
+.type-grass {
+  background-color: var(--type-grass);
+}
+.type-rock {
+  background-color: var(--type-rock);
+}
+.type-ghost {
+  background-color: var(--type-ghost);
+}
+.type-steel {
+  background-color: var(--type-steel);
+}
+.type-water {
+  background-color: var(--type-water);
+}
+.type-ice {
+  background-color: var(--type-ice);
+}
+.type-psychic {
+  background-color: var(--type-psychic);
+}
+.type-dark {
+  background-color: var(--type-dark);
+}
+.type-fairy {
+  background-color: var(--type-fairy);
+}
+.type-normal {
+  background-color: var(--type-normal);
+}
+.type-fighting {
+  background-color: var(--type-fighting);
+}
+.type-flying {
+  background-color: var(--type-flying);
+}
+.type-poison {
+  background-color: var(--type-poison);
+}
+.type-ground {
+  background-color: var(--type-ground);
+}
+.type-bug {
+  background-color: var(--type-bug);
+}
+.type-fire {
+  background-color: var(--type-fire);
+}
+.type-electric {
+  background-color: var(--type-electric);
+}
+.type-dragon {
+  background-color: var(--type-dragon);
 }

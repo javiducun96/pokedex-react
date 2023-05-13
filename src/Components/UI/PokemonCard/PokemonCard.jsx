@@ -1,7 +1,7 @@
 import "./styles.css";
 
 const TypeChip = ({ type }) => {
-  return <span>{type}</span>;
+  return <span className="chip type-grass">{type}</span>;
 };
 
 const PokemonTypesChips = ({ types }) => {
