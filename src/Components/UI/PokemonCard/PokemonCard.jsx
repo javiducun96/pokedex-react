@@ -1,7 +1,17 @@
 import "./styles.css";
 
 const TypeChip = ({ type }) => {
-  return <span className="chip type-grass">{type}</span>;
+  const styles = {
+    backgroundColor: `var(--type-${type})`,
+  };
+
+  const typeUppercase = type[0].toUpperCase() + type.slice(1);
+
+  return (
+    <span className="chip" style={styles}>
+      {typeUppercase}
+    </span>
+  );
 };
 
 const PokemonTypesChips = ({ types }) => {
@@ -15,7 +25,7 @@ const PokemonTypesChips = ({ types }) => {
 };
 
 const PokemonCard = (props) => {
-  const types = ["Grass", "Poison"];
+  const types = ["grass", "poison"];
   return (
     <article className="card type-grass">
       <div className="card-header">
@@ -24,6 +34,7 @@ const PokemonCard = (props) => {
       </div>
       <div className="pokemon-attributes">
         <PokemonTypesChips types={types} />
+        <h3 className="title-about type-grass">About</h3>
       </div>
     </article>
   );
