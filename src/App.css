@@ -1,13 +1,12 @@
 @font-face {
   font-family: Poppins;
   src: url("./styles/fonts/Poppins-Regular.ttf");
-  font-weight: var(--font-regular);
 }
 
 @font-face {
   font-family: Poppins;
   src: url("./styles/fonts/Poppins-Bold.ttf");
-  font-weight: var(--font-bold);
+  font-weight: bold;
 }
 
 body {
@@ -15,5 +14,5 @@ body {
 }
 
 .fw-bold {
-  font-weight: var(--font-bold);
+  font-weight: bold;
 }
