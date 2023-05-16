@@ -1,4 +1,5 @@
 import React from "react"
+import "./styles.css"
 import PokemonCard from "../../components/UI/organisms/PokemonCard/PokemonCard"
 import bulbasaurPhoto from "../../assets/images/pokemons/bulbasaur.png"
 import charmanderPhoto from "../../assets/images/pokemons/charmander.png"
@@ -71,10 +72,10 @@ export const Home = () => {
     },
   ]
   return (
-    <>
+    <div class="pokemons-list">
       {pokemons.map((pokemon) => (
         <PokemonCard pokemon={pokemon} />
       ))}
-    </>
+    </div>
   )
 }
