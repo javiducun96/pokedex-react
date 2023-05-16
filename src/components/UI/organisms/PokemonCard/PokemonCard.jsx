@@ -1,7 +1,7 @@
 import { PokemonAtributtes } from "../../molecules/PokemonAtributtes"
 import "./styles.css"
 
-const PokemonCard = ({ pokemon }) => {
+export const PokemonCard = ({ pokemon }) => {
   const mainType = pokemon?.types[0]
   return (
     <article className={`card type-${mainType}`}>
@@ -13,5 +13,3 @@ const PokemonCard = ({ pokemon }) => {
     </article>
   )
 }
-
-export default PokemonCard

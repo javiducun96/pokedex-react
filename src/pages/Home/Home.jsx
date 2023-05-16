@@ -1,6 +1,6 @@
 import React from "react"
 import "./styles.css"
-import PokemonCard from "../../components/UI/organisms/PokemonCard/PokemonCard"
+import { PokemonList } from "../../components/UI/organisms/PokemonList"
 import bulbasaurPhoto from "../../assets/images/pokemons/bulbasaur.png"
 import charmanderPhoto from "../../assets/images/pokemons/charmander.png"
 import butterfreePhoto from "../../assets/images/pokemons/butterfree.png"
@@ -71,11 +71,5 @@ export const Home = () => {
       image: squirtlePhoto,
     },
   ]
-  return (
-    <div class="pokemons-list">
-      {pokemons.map((pokemon) => (
-        <PokemonCard pokemon={pokemon} />
-      ))}
-    </div>
-  )
+  return <PokemonList pokemons={pokemons} />
 }
