@@ -40,8 +40,8 @@
   color: var(--medium-gray);
 }
 .pokemon-description {
-  font-size: var(--font-small-size);
-  line-height: var(--font-small-line-height);
+  font-size: var(--font-tiny-size);
+  line-height: var(--font-tiny-line-height);
   color: var(--dark-gray);
   text-align: justify;
 }
