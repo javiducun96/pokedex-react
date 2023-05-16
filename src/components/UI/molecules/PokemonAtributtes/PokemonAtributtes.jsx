@@ -2,7 +2,6 @@ import React from "react"
 import "./styles.css"
 import weightPhoto from "../../../../assets/images/icons/width.svg"
 import heightPhoto from "../../../../assets/images/icons/height.svg"
-import bulbasaurPhoto from "../../../../assets/images/pokemons/bulbasaur.png"
 
 import { ChipGroup } from "../../molecules/ChipGroup"
 import { AboutTitle } from "../../atoms/AboutTitle/AboutTitle"
@@ -10,7 +9,7 @@ import { AboutTitle } from "../../atoms/AboutTitle/AboutTitle"
 export const PokemonAtributtes = ({ pokemon }) => {
   return (
     <div className="pokemon-attributes">
-      <img src={bulbasaurPhoto} alt="" className="poke-image"></img>
+      <img src={pokemon.image} alt="" className="poke-image"></img>
       <ChipGroup types={pokemon.types} />
       <AboutTitle type={pokemon.types[0]} />
       <div className="pokemon-data">
