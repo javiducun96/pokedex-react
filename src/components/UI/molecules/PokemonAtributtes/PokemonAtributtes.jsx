@@ -30,10 +30,7 @@ export const PokemonAtributtes = ({ pokemon }) => {
           <span className="data-group-subtitle">Height</span>
         </div>
       </div>
-      <p className="pokemon-description">
-        There is a plant seed on its back right from the day this Pokémon is
-        born.
-      </p>
+      <p className="pokemon-description">{pokemon.description}</p>
     </div>
   )
 }
