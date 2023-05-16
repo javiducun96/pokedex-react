@@ -7,17 +7,17 @@ import bulbasaur from "../../../../assets/images/pokemons/bulbasaur.png"
 import { ChipGroup } from "../../molecules/ChipGroup"
 import { AboutTitle } from "../../atoms/AboutTitle/AboutTitle"
 
-export const PokemonAtributtes = ({ types }) => {
+export const PokemonAtributtes = ({ pokemon }) => {
   return (
     <div className="pokemon-attributes">
       <img src={bulbasaur} alt="" className="poke-image"></img>
-      <ChipGroup types={types} />
-      <AboutTitle type={types[0]} />
+      <ChipGroup types={pokemon.types} />
+      <AboutTitle type={pokemon.types[0]} />
       <div className="pokemon-data">
         <div className="data-group">
           <div className="title-data-group">
             <img src={weight} width={16} height={16} alt="weight icon" />
-            <p>6,9 kg</p>
+            <p>{pokemon.weight} kg</p>
           </div>
           <span className="data-group-subtitle">Weight</span>
         </div>
@@ -25,7 +25,7 @@ export const PokemonAtributtes = ({ types }) => {
         <div className="data-group">
           <div className="title-data-group">
             <img src={height} width={16} height={16} alt="height icon" />
-            <p>0,7 m</p>
+            <p>{pokemon.height} m</p>
           </div>
           <span className="data-group-subtitle">Height</span>
         </div>

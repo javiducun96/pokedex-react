@@ -1,15 +1,14 @@
 import { PokemonAtributtes } from "../../molecules/PokemonAtributtes"
 import "./styles.css"
 
-const PokemonCard = (props) => {
-  const types = ["grass", "poison"]
+const PokemonCard = ({ pokemon }) => {
   return (
     <article className="card type-grass">
       <div className="card-header">
-        <span className="pokemon-name">Bulbasaur</span>
-        <span className="pokemon-number">#001</span>
+        <span className="pokemon-name">{pokemon.name}</span>
+        <span className="pokemon-number">{pokemon.number}</span>
       </div>
-      <PokemonAtributtes types={types} />
+      <PokemonAtributtes pokemon={pokemon} />
     </article>
   )
 }
