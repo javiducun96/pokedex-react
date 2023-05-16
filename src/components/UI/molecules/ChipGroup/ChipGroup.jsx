@@ -1,13 +1,13 @@
-import React from "react";
-import { Chip } from "../../atoms/Chip";
-import './styles.css';
+import React from "react"
+import { Chip } from "../../atoms/Chip"
+import "./styles.css"
 
 export const ChipGroup = ({ types }) => {
-    return (
-      <div className="pokemon-types">
-        {types.map((type) => (
-          <Chip type={type} />
-        ))}
-      </div>
-    );
-  };
+  return (
+    <div className="pokemon-types">
+      {types.map((type) => (
+        <Chip type={type} />
+      ))}
+    </div>
+  )
+}
