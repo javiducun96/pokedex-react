@@ -1,13 +1,13 @@
-import "./styles.css";
-import weight from "../../../../assets/images/icons/width.svg";
-import height from "../../../../assets/images/icons/height.svg";
-import bulbasaur from "../../../../assets/images/pokemons/bulbasaur.png";
+import "./styles.css"
+import weight from "../../../../assets/images/icons/width.svg"
+import height from "../../../../assets/images/icons/height.svg"
+import bulbasaur from "../../../../assets/images/pokemons/bulbasaur.png"
 
-import {ChipGroup} from '../../molecules/ChipGroup'
-import { AboutTitle } from "../../atoms/AboutTitle/AboutTitle";
+import { ChipGroup } from "../../molecules/ChipGroup"
+import { AboutTitle } from "../../atoms/AboutTitle/AboutTitle"
 
 const PokemonCard = (props) => {
-  const types = ["grass", "poison"];
+  const types = ["grass", "poison"]
   return (
     <article className="card type-grass">
       <div className="card-header">
@@ -41,7 +41,7 @@ const PokemonCard = (props) => {
         </p>
       </div>
     </article>
-  );
-};
+  )
+}
 
-export default PokemonCard;
+export default PokemonCard

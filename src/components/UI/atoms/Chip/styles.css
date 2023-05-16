@@ -1,8 +1,9 @@
 .chip {
-    border-radius: 10px;
-    padding: 2px 8px;
-    font-size: var(--font-small-size);
-    color: var(--white);
-    line-height: var(--font-small-line-height);
-    font-weight: bold;
-  }
+  border-radius: 10px;
+  padding: 2px 8px;
+  font-size: var(--font-small-size);
+  color: var(--white);
+  line-height: var(--font-small-line-height);
+  font-weight: bold;
+  text-transform: capitalize;
+}
