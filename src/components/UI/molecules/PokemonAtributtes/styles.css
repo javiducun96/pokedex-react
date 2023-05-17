@@ -13,6 +13,7 @@
   right: 0;
   margin: auto;
   top: -99px;
+  width: 115px; /* ## TODO: Refactor to put image on PokemonCard and center it*/
 }
 
 .pokemon-data {
