@@ -4,15 +4,12 @@ import "./styles.css"
 
 export const PokemonCard = ({ pokemonId }) => {
   const { pokemon, loading, error } = usePokemon(pokemonId)
-  console.log({pokemon, loading, error})
 
-  if (loading)
-    return <div>Loading...</div>
-  if (error)
-    return <div>Error: {error}</div>
-  
+  if (loading) return <div>Loading...</div>
+  if (error) return <div>Error: {error}</div>
+
   const mainType = pokemon?.types[0]
-  const numberToText = num => '#'+num.toString().padStart(3, '0') 
+  const numberToText = (num) => "#" + num.toString().padStart(3, "0")
 
   return (
     <article className={`card type-${mainType}`}>

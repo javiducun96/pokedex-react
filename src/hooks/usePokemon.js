@@ -5,7 +5,6 @@ const usePokemon = (pokemonId) => {
   const [error, setError] = useState("")
 
   function getImageFromApiResponse(apiResponse) {
-    console.log({ asd: apiResponse })
     let image = apiResponse?.sprites?.other?.["official-artwork"]?.front_default
     if (image) return image
 
