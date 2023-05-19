@@ -7,13 +7,18 @@
   padding: 56px 20px 16px 20px;
 }
 
-.pokemon-attributes .poke-image {
+.poke-image-container {
   position: absolute;
+  height: 130px;
+  width: 100%;
+  top: -90px;
   left: 0;
-  right: 0;
+}
+
+.poke-image-container .poke-image {
+  height: 100%;
   margin: auto;
-  top: -99px;
-  width: 115px; /* ## TODO: Refactor to put image on PokemonCard and center it*/
+  display: block;
 }
 
 .pokemon-data {

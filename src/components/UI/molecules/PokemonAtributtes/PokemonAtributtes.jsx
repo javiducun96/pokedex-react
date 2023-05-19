@@ -9,7 +9,9 @@ import { AboutTitle } from "../../atoms/AboutTitle/AboutTitle"
 export const PokemonAtributtes = ({ pokemon }) => {
   return (
     <div className="pokemon-attributes">
-      <img src={pokemon.image} alt="" className="poke-image"></img>
+      <div className="poke-image-container">
+        <img src={pokemon.image} alt="" className="poke-image"></img>
+      </div>
       <ChipGroup types={pokemon.types} />
       <AboutTitle type={pokemon.types[0]} />
       <div className="pokemon-data">
