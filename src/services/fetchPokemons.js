@@ -31,8 +31,8 @@ function mapPokemon(apiResponse) {
     name: apiResponse.name,
     number: apiResponse.id,
     types: apiResponse.types.map((type) => type.type.name),
-    weight: apiResponse.weight,
-    height: apiResponse.height,
+    weight: apiResponse.weight / 10,
+    height: apiResponse.height / 10,
     description:
       "There is a plant seed on its back right from the day this Pokémon is born. The seed slowly grows larger.",
     image: getImageFromApiResponse(apiResponse),
