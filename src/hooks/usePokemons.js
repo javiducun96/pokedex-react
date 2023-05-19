@@ -6,7 +6,7 @@ const usePokemons = () => {
   const [error, setError] = useState(undefined)
 
   useEffect(() => {
-    fetchPokemons(100).then((data) => {
+    fetchPokemons(1400).then((data) => {
       setPokemons(data)
       setLoading(false)
       setError("")
