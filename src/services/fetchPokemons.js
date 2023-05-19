@@ -1,5 +1,5 @@
 async function fetchPokemons(limit = 10) {
-  const url = "https://pokeapi.co/api/v2/pokemon?limit=" + limit
+  const url = `https://pokeapi.co/api/v2/pokemon?limit=${limit}`
   const res = await fetch(url)
   const data = await res.json()
   const extendedPokemon = await getPokemonsExtendedInfo(data.results)
@@ -7,11 +7,10 @@ async function fetchPokemons(limit = 10) {
 }
 
 async function getPokemonsExtendedInfo(pokemons) {
-  const getPokemon = (pokemon) => {
-    const response = fetch(pokemon.url)
-      .then((res) => res.json())
-      .then((data) => mapPokemon(data))
-    return response
+  const getPokemon = async (pokemon) => {
+    const res = await fetch(pokemon.url)
+    const data = await res.json()
+    return mapPokemon(data)
   }
 
   const extendedPokemons = await Promise.all(pokemons.map(getPokemon))

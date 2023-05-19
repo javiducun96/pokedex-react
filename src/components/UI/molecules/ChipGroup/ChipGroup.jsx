@@ -6,7 +6,7 @@ export const ChipGroup = ({ types }) => {
   return (
     <div className="pokemon-types">
       {types.map((type) => (
-        <Chip type={type} />
+        <Chip key={type} type={type} />
       ))}
     </div>
   )

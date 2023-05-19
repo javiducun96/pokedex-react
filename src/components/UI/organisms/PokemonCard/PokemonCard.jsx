@@ -2,7 +2,7 @@ import { PokemonAtributtes } from "../../molecules/PokemonAtributtes"
 import "./styles.css"
 
 export const PokemonCard = ({ pokemon }) => {
-  const mainType = pokemon?.types[0]
+  const mainType = pokemon.types[0]
   const numberToText = (num) => "#" + num.toString().padStart(3, "0")
 
   return (
