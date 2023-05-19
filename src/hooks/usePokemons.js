@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react"
-import { fetchPokemons } from "../services/fetchPokemons"
+import fetchPokemons from "../services/fetchPokemons"
 const usePokemons = () => {
-  const [pokemons, setPokemons] = useState(null)
+  const [pokemons, setPokemons] = useState(undefined)
   const [loading, setLoading] = useState(true)
-  const [error, setError] = useState("")
+  const [error, setError] = useState(undefined)
 
   useEffect(() => {
-    fetchPokemons(10000).then((data) => {
+    fetchPokemons(10).then((data) => {
       setPokemons(data)
       setLoading(false)
       setError("")

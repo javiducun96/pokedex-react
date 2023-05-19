@@ -1,23 +1,21 @@
-export async function fetchPokemons(limit = 10) {
+async function fetchPokemons(limit = 10) {
   const url = "https://pokeapi.co/api/v2/pokemon?limit=" + limit
-  const response = await fetch(url)
-    .then((res) => res.json())
-    .then((data) => data)
-  const extendedPokemon = await getPokemonsExtendedInfo(response.results)
-  console.log({ extendedPokemon })
+  const res = await fetch(url)
+  const data = await res.json()
+  const extendedPokemon = await getPokemonsExtendedInfo(data.results)
   return extendedPokemon
 }
 
 async function getPokemonsExtendedInfo(pokemons) {
-  const getPokemon = async (pokemon) => {
-    const response = await fetch(pokemon.url)
+  const getPokemon = (pokemon) => {
+    const response = fetch(pokemon.url)
       .then((res) => res.json())
       .then((data) => mapPokemon(data))
     return response
   }
-  const extendedPokemons = await Promise.all(
-    pokemons.map(async (pokemon) => await getPokemon(pokemon))
-  )
+
+  const extendedPokemons = await Promise.all(pokemons.map(getPokemon))
+
   return extendedPokemons
 }
 
@@ -42,3 +40,5 @@ function mapPokemon(apiResponse) {
   }
   return pokemon
 }
+
+export default fetchPokemons

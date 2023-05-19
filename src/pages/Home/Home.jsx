@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import "./styles.css"
 import { PokemonList } from "../../components/UI/organisms/PokemonList"
 import usePokemons from "../../hooks/usePokemons"
