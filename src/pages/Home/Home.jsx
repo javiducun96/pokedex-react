@@ -1,11 +1,13 @@
-import React from "react"
+import React, { useEffect } from "react"
 import "./styles.css"
 import { PokemonList } from "../../components/UI/organisms/PokemonList"
-import { getPokemons } from "../../services/getPokemons"
+import usePokemons from "../../hooks/usePokemons"
 
 export const Home = () => {
-  const pokemonsv2 = getPokemons(2000)
-  const pokemons = Array.from({ length: 1000 }, (_, i) => i + 1)
+  const { pokemons, loading, error } = usePokemons()
+
+  if (loading) return <div>Loading...</div>
+  if (error) return <div>Error: {error}</div>
 
   return <PokemonList pokemons={pokemons} />
 }

@@ -4,8 +4,8 @@ import "./styles.css"
 export const PokemonList = ({ pokemons }) => {
   return (
     <div class="pokemons-list">
-      {pokemons.map((pokemonId) => (
-        <PokemonCard pokemonId={pokemonId} />
+      {pokemons.map((pokemon) => (
+        <PokemonCard pokemon={pokemon} />
       ))}
     </div>
   )
