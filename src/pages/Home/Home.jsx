@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import "./styles.css"
 import { PokemonList } from "../../components/UI/organisms/PokemonList"
 import usePokemons from "../../hooks/usePokemons"
+import lookForPhoto from "../../assets/images/icons/look-for.svg"
 
 export const Home = () => {
   const { pokemons, loading, error } = usePokemons()
@@ -18,12 +19,21 @@ export const Home = () => {
 
   return (
     <div>
-      <input
-        type="text"
-        onChange={(event) => setFilter(event.target.value)}
-        value={filter}
-      ></input>
-      <PokemonList pokemons={filteredPokemons} />
+      <div className="filter-panel">
+        <div className="filter-name">
+          <img className="lookfor-icon" src={lookForPhoto} alt="search" />
+          <input
+            id="filter-name"
+            className="filter-textbox"
+            type="text"
+            onChange={(event) => setFilter(event.target.value)}
+            value={filter}
+          ></input>
+        </div>
+      </div>
+      <div className="pokemon-list-container">
+        <PokemonList pokemons={filteredPokemons} />
+      </div>
     </div>
   )
 }

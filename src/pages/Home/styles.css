@@ -4,3 +4,44 @@
   gap: 24px 20px;
   justify-content: center;
 }
+
+.filter-panel {
+  width: 100%;
+  text-align: center;
+  display: block;
+  margin-bottom: 54px;
+  margin-top: 41px;
+}
+
+.filter-name {
+  width: 502px;
+  height: 35px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  margin: 0 auto;
+}
+
+.filter-name:focus {
+  border: 3px solid blue;
+}
+
+.lookfor-icon {
+  width: 16px;
+  height: 16px;
+  margin: 9px 15px 0 9px;
+}
+
+.filter-textbox {
+  width: 455px;
+  border: none;
+}
+
+.filter-textbox:focus {
+  outline: none;
+}
+
+.pokemon-list-container {
+  width: 90%;
+  margin-left: 5%;
+}
