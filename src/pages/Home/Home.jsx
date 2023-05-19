@@ -19,7 +19,7 @@ export const Home = () => {
   )
 
   return (
-    <div>
+    <>
       <header>
         <img className="pokeball-icon" src={PokeballPhoto} alt="pokeball" />
         <h1>My Pokédex</h1>
@@ -39,6 +39,7 @@ export const Home = () => {
       <div className="pokemon-list-container">
         <PokemonList pokemons={filteredPokemons} />
       </div>
-    </div>
+      <footer></footer>
+    </>
   )
 }
