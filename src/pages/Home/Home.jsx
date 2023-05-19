@@ -3,6 +3,7 @@ import "./styles.css"
 import { PokemonList } from "../../components/UI/organisms/PokemonList"
 import usePokemons from "../../hooks/usePokemons"
 import lookForPhoto from "../../assets/images/icons/look-for.svg"
+import PokeballPhoto from "../../assets/images/icons/pokeball.svg"
 
 export const Home = () => {
   const { pokemons, loading, error } = usePokemons()
@@ -19,6 +20,10 @@ export const Home = () => {
 
   return (
     <div>
+      <header>
+        <img className="pokeball-icon" src={PokeballPhoto} alt="pokeball" />
+        <h1>My Pokédex</h1>
+      </header>
       <div className="filter-panel">
         <div className="filter-name">
           <img className="lookfor-icon" src={lookForPhoto} alt="search" />
