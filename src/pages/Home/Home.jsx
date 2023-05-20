@@ -42,9 +42,13 @@ export const Home = () => {
         <PokemonList pokemons={filteredPokemons} />
       </div>
       <footer>
-        <img className="footer-icon" src={GitHubPhoto} alt="github" />
+        <a href="https://github.com/javiducun96/pokedex-react" target="_blank" rel="noreferrer">
+          <img className="footer-icon" src={GitHubPhoto} alt="github" />
+        </a>
         <div className="divider" />
-        <img className="footer-icon" src={PokeAPIPhoto} alt="pokeAPI" />
+        <a href="https://pokeapi.co/" target="_blank" rel="noreferrer">
+          <img className="footer-icon" src={PokeAPIPhoto} alt="pokeAPI" />
+        </a>
       </footer>
     </>
   )
