@@ -1,4 +1,4 @@
-async function fetchPokemons(limit = 10) {
+async function getPokemons(limit = 10) {
   const url = `https://pokeapi.co/api/v2/pokemon?limit=${limit}`
   const res = await fetch(url)
   const data = await res.json()
@@ -26,6 +26,14 @@ function getImageFromApiResponse(apiResponse) {
   if (image) return image
 }
 
+function getShinyImageFromApiResponse(apiResponse) {
+  let image = apiResponse?.sprites?.other?.["official-artwork"]?.front_shiny
+  if (image) return image
+
+  image = apiResponse?.sprites?.front_shiny
+  if (image) return image
+}
+
 function mapPokemon(apiResponse) {
   const pokemon = {
     name: apiResponse.name,
@@ -36,8 +44,9 @@ function mapPokemon(apiResponse) {
     description:
       "There is a plant seed on its back right from the day this Pokémon is born. The seed slowly grows larger.",
     image: getImageFromApiResponse(apiResponse),
+    shinyImage: getShinyImageFromApiResponse(apiResponse),
   }
   return pokemon
 }
 
-export default fetchPokemons
+export default getPokemons
