@@ -29,7 +29,9 @@ header h1 {
 .filter-panel {
   width: 100%;
   text-align: center;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 54px;
   margin-top: 41px;
 }
@@ -40,26 +42,50 @@ header h1 {
   border-radius: 8px;
   border: 1px solid #e0e0e0;
   display: flex;
-  margin: 0 auto;
 }
 
-.filter-name:focus {
-  border: 3px solid blue;
-}
-
-.lookfor-icon {
+.filter-name .lookfor-icon {
   width: 16px;
   height: 16px;
   margin: 9px 15px 0 9px;
 }
 
-.filter-textbox {
+.filter-name .filter-textbox {
   width: 455px;
   border: none;
 }
 
-.filter-textbox:focus {
+.filter-name .filter-textbox:focus {
   outline: none;
+}
+
+.filter-shiny {
+  height: 35px;
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.filter-shiny button {
+  display: flex;
+  align-items: center;
+}
+
+.filter-shiny .active {
+  background-color: var(--type-electric);
+  display: flex;
+  align-items: center;
+}
+
+.shiny-text {
+  font-size: var(--font-medium-size);
+  line-height: var(--font-medium-line-height);
+  padding: 3px;
+}
+
+.shiny-icon {
+  height: 28px;
+  width: 28px;
 }
 
 .pokemon-list-container {

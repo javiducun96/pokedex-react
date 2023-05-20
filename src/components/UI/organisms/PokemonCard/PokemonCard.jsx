@@ -1,7 +1,7 @@
 import { PokemonAtributtes } from "../../molecules/PokemonAtributtes"
 import "./styles.css"
 
-export const PokemonCard = ({ pokemon }) => {
+export const PokemonCard = ({ pokemon, useShinyPhoto }) => {
   const mainType = pokemon.types[0]
   const numberToText = (num) => "#" + num.toString().padStart(3, "0")
 
@@ -11,7 +11,7 @@ export const PokemonCard = ({ pokemon }) => {
         <span className="pokemon-name">{pokemon.name}</span>
         <span className="pokemon-number">{numberToText(pokemon.number)}</span>
       </div>
-      <PokemonAtributtes pokemon={pokemon} />
+      <PokemonAtributtes pokemon={pokemon} useShinyPhoto={useShinyPhoto}/>
     </article>
   )
 }

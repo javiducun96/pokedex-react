@@ -6,11 +6,12 @@ import heightPhoto from "../../../../assets/images/icons/height.svg"
 import { ChipGroup } from "../../molecules/ChipGroup"
 import { AboutTitle } from "../../atoms/AboutTitle/AboutTitle"
 
-export const PokemonAtributtes = ({ pokemon }) => {
+export const PokemonAtributtes = ({ pokemon, useShinyPhoto }) => {
+  const image = useShinyPhoto ? (pokemon.shinyImage ?? pokemon.image) : pokemon.image
   return (
     <div className="pokemon-attributes">
       <div className="poke-image-container">
-        <img src={pokemon.image} alt="" className="poke-image" />
+        <img src={image} alt="" className="poke-image" />
       </div>
       <ChipGroup types={pokemon.types} />
       <AboutTitle type={pokemon.types[0]} />
