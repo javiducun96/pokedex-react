@@ -10,7 +10,7 @@ export const PokemonAtributtes = ({ pokemon }) => {
   return (
     <div className="pokemon-attributes">
       <div className="poke-image-container">
-        <img src={pokemon.image} alt="" className="poke-image"></img>
+        <img src={pokemon.image} alt="" className="poke-image" />
       </div>
       <ChipGroup types={pokemon.types} />
       <AboutTitle type={pokemon.types[0]} />
@@ -22,7 +22,7 @@ export const PokemonAtributtes = ({ pokemon }) => {
           </div>
           <span className="data-group-subtitle">Weight</span>
         </div>
-        <div className="divider"></div>
+        <div className="divider" />
         <div className="data-group">
           <div className="title-data-group">
             <img src={heightPhoto} width={16} height={16} alt="height icon" />

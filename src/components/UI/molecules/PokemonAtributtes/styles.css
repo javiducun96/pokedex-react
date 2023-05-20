@@ -52,7 +52,7 @@
   text-align: justify;
 }
 
-.divider {
+.pokemon-data .divider {
   width: 1px;
   height: 52px;
   background: var(--light-gray);

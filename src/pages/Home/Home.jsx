@@ -4,6 +4,8 @@ import { PokemonList } from "../../components/UI/organisms/PokemonList"
 import usePokemons from "../../hooks/usePokemons"
 import lookForPhoto from "../../assets/images/icons/look-for.svg"
 import PokeballPhoto from "../../assets/images/icons/pokeball.svg"
+import GitHubPhoto from "../../assets/images/icons/github.svg"
+import PokeAPIPhoto from "../../assets/images/icons/pokeapi.svg"
 
 export const Home = () => {
   const { pokemons, loading, error } = usePokemons()
@@ -39,7 +41,11 @@ export const Home = () => {
       <div className="pokemon-list-container">
         <PokemonList pokemons={filteredPokemons} />
       </div>
-      <footer></footer>
+      <footer>
+        <img className="footer-icon" src={GitHubPhoto} alt="github" />
+        <div className="divider" />
+        <img className="footer-icon" src={PokeAPIPhoto} alt="pokeAPI" />
+      </footer>
     </>
   )
 }
