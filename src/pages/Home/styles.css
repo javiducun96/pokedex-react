@@ -40,7 +40,7 @@ header h1 {
   width: 502px;
   height: 35px;
   border-radius: 8px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--light-gray);
   display: flex;
 }
 
@@ -69,12 +69,10 @@ header h1 {
 .filter-shiny button {
   display: flex;
   align-items: center;
-}
-
-.filter-shiny .active {
-  background-color: var(--type-electric);
-  display: flex;
-  align-items: center;
+  border: 1px solid var(--light-gray);
+  background-color: white;
+  border-radius: 8px;
+  padding: 2px 10px;
 }
 
 .shiny-text {
@@ -86,6 +84,15 @@ header h1 {
 .shiny-icon {
   height: 28px;
   width: 28px;
+}
+
+.filter-shiny .active {
+  color: var(--shiny-color);
+  border: 1px solid var(--shiny-color);
+}
+
+.filter-shiny .active .shiny-icon {
+  filter: invert(24%) sepia(23%) saturate(6680%) hue-rotate(167deg) brightness(92%) contrast(104%);
 }
 
 .pokemon-list-container {
